@@ -1,0 +1,27 @@
+docker build . -t marwaradwan/testApp
+
+docker image ls
+
+docker login
+
+docker push marwaradwan/testApp
+
+kubectl get all
+
+kubectl create deployment testApp --image=marwaradwan/testApp
+
+kubectl get deploy
+
+kubectl scale deployment testApp --replicas=12
+
+kubectl get pods -o wide
+
+minikube ssh
+
+curl ip:3000
+
+kubectl delete svc testApp
+
+kubectl expose deployment testApp --type=NodePort --port=3000
+
+minikube service testApp

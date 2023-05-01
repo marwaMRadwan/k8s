@@ -1,0 +1,9 @@
+docker build . -t marwaradwan/testApp:1.0.1
+
+docker login
+
+docker push marwaradwan/testApp:1.0.1
+
+kubectl set image deploy testApp testApp=marwaradwan/testApp:1.0.1
+
+minikube service testApp
